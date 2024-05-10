@@ -43,10 +43,10 @@ if(saveMytask.length>0&& mytask.length===0){
   }
 
     return (
-        <div>
-        <input type="text"  placeholder="subject" value={subject} onChange={(e)=>setSubject(e.target.value)}></input>
-        <input type="number" placeholder="hour" value={hours} onChange={(e)=>setHours(e.target.value)}></input>
-        <button onClick={funHandler}>add</button>
+        <div style={{margin:"20px",alignItems:"center",justifyContent:"center",gap:"20px",boxShadow:"10px 5px 5px 5px",padding:"30px 20px",width:"500px",marginLeft:"450px"}}>
+        <input style={{padding:"10px"}} type="text"  placeholder="subject" value={subject} onChange={(e)=>setSubject(e.target.value)}></input>
+        <input style={{padding:"10px"}} type="number" placeholder="hour" value={hours} onChange={(e)=>setHours(e.target.value)}></input>
+        <button style={{padding:"10px 20px",backgroundColor:"black",color:"white"}} onClick={funHandler}>add</button>
         
         
         <section style={{margin:"20px",display:"flex"}}>
@@ -54,11 +54,11 @@ if(saveMytask.length>0&& mytask.length===0){
                 mytask.map((iteam,index)=>(
                     <>
                     {/* <Tasklist key={index} subject={iteam.subject} hours={iteam.hours}/> */}
-                    <span>{iteam.subject}</span>
-                     <span>-</span>
-                     <span>{iteam.hours}</span>
-                     <button onClick={()=>increment(index)}>+</button>
-                     <button onClick={()=>decrement(index)}>-</button>
+                    <span style={{padding:"5px",fontSize:"30px"}}>{iteam.subject}</span>
+                     <span style={{padding:"5px",fontSize:"30px"}}>-</span>
+                     <span style={{padding:"5px",fontSize:"30px"}}>{iteam.hours}</span>
+                     <button style={{padding:"5px",marginLeft:"10px",backgroundColor:"green",color:"white"}} onClick={()=>increment(index)}>+</button>
+                     <button style={{padding:"5px",marginLeft:"10px",backgroundColor:"red",color:"white"}} onClick={()=>decrement(index)}>-</button>
                     </>
                 ))
             }
